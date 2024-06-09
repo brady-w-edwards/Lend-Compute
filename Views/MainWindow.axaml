@@ -27,17 +27,23 @@
     </Border>
 
     <Grid ShowGridLines="True" Margin="5"
-        ColumnDefinitions="120, 100" 
-        RowDefinitions="Auto, Auto, Auto, Auto, Auto">
-        <Label Grid.Row="0" Grid.Column="0" Margin="10">House Price</Label>
+        ColumnDefinitions="120, 100, 120" 
+        RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="10">House Price</TextBlock>
         <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0"/>
-        <Label Grid.Row="1" Grid.Column="0" Margin="10">Down Payment</Label>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="10">Down Payment</TextBlock>
         <TextBox Grid.Row="1"  Grid.Column="1" Margin="0 5" Text="0"/>
-        <Label Grid.Row="2" Grid.Column="0" Margin="10">Interest Rate</Label>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="10">Interest Rate</TextBlock>
         <TextBox Grid.Row="2"  Grid.Column="1" Margin="0 5" Text="0"/>
-        <Label Grid.Row="3" Grid.Column="0" Margin="10">Loan Term</Label>
+        <TextBlock Grid.Row="2" Grid.Column="2" Margin="0 5">%</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="10">Loan Term</TextBlock>
         <TextBox Grid.Row="3"  Grid.Column="1" Margin="0 5" Text="0"/>
-        <Button Grid.Row="4" Grid.Column="1" Margin="0 5" Click="ButtonClicked">Calculate</Button>
+        <TextBlock Grid.Row="3" Grid.Column="2" Margin="0 5">years</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="10">Loan Amount</TextBlock>
+        <TextBox Grid.Row="4"  Grid.Column="1" Margin="0 5" Text="0"/>
+        <Button Grid.Row="5" Grid.Column="1" Margin="0 5" Click="ButtonClicked">Calculate</Button>
+        <TextBlock Grid.Row="6" Grid.Column="0" TextWrapping="Wrap" Margin="10">Principal and Interest</TextBlock>
+        <TextBox Grid.Row="6"  Grid.Column="1" Margin="0 5" Text="0"/>
     </Grid>
     </StackPanel>
 
