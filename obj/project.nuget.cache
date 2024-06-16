@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tku/L0lWyAU=",
+  "dgSpecHash": "UsyeSq4ffgY=",
   "success": true,
   "projectFilePath": "/Users/bradyedwards/Desktop/Avalonia Apps/Loan Calculator/Loan Calculator.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "/Users/bradyedwards/.nuget/packages/avalonia.themes.simple/11.0.10/avalonia.themes.simple.11.0.10.nupkg.sha512",
     "/Users/bradyedwards/.nuget/packages/avalonia.win32/11.0.10/avalonia.win32.11.0.10.nupkg.sha512",
     "/Users/bradyedwards/.nuget/packages/avalonia.x11/11.0.10/avalonia.x11.11.0.10.nupkg.sha512",
+    "/Users/bradyedwards/.nuget/packages/communitytoolkit.mvvm/8.2.2/communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "/Users/bradyedwards/.nuget/packages/dynamicdata/7.9.5/dynamicdata.7.9.5.nupkg.sha512",
     "/Users/bradyedwards/.nuget/packages/harfbuzzsharp/7.3.0/harfbuzzsharp.7.3.0.nupkg.sha512",
     "/Users/bradyedwards/.nuget/packages/harfbuzzsharp.nativeassets.linux/7.3.0/harfbuzzsharp.nativeassets.linux.7.3.0.nupkg.sha512",

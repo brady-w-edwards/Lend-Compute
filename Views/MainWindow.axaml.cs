@@ -10,8 +10,4 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
-    public void ButtonClicked(object source, RoutedEventArgs args)
-    {
-        Console.WriteLine("Click!");
-    }
 }

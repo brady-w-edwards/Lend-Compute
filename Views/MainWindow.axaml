@@ -30,18 +30,19 @@
         ColumnDefinitions="120, 100, 120" 
         RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
         <TextBlock Grid.Row="0" Grid.Column="0" Margin="10">House Price</TextBlock>
-        <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="0"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Text="{Binding Cost, Mode=TwoWay}"/>
         <TextBlock Grid.Row="1" Grid.Column="0" Margin="10">Down Payment</TextBlock>
-        <TextBox Grid.Row="1"  Grid.Column="1" Margin="0 5" Text="0"/>
+        <TextBox Grid.Row="1"  Grid.Column="1" Margin="0 5" Text="{Binding DwnPayment, Mode=TwoWay}"/>
         <TextBlock Grid.Row="2" Grid.Column="0" Margin="10">Interest Rate</TextBlock>
-        <TextBox Grid.Row="2"  Grid.Column="1" Margin="0 5" Text="0"/>
+        <TextBox Grid.Row="2"  Grid.Column="1" Margin="0 5" Text="{Binding IntRate, Mode=TwoWay}"/>
         <TextBlock Grid.Row="2" Grid.Column="2" Margin="0 5">%</TextBlock>
         <TextBlock Grid.Row="3" Grid.Column="0" Margin="10">Loan Term</TextBlock>
-        <TextBox Grid.Row="3"  Grid.Column="1" Margin="0 5" Text="0"/>
+        <TextBox Grid.Row="3"  Grid.Column="1" Margin="0 5" Text="{Binding LoanTerm, Mode=TwoWay}"/>
         <TextBlock Grid.Row="3" Grid.Column="2" Margin="0 5">years</TextBlock>
+        <Button Grid.Row="5" Grid.Column="1" Margin="0 5" Command="{Binding LendCompute}">
+            <PathIcon Data="{StaticResource store_microsoft_regular}"/>Calculate</Button>
         <TextBlock Grid.Row="4" Grid.Column="0" Margin="10">Loan Amount</TextBlock>
-        <TextBox Grid.Row="4"  Grid.Column="1" Margin="0 5" Text="0"/>
-        <Button Grid.Row="5" Grid.Column="1" Margin="0 5" Click="ButtonClicked">Calculate</Button>
+        <TextBox Grid.Row="4"  Grid.Column="1" Margin="0 5" Text="{Binding LoanAmount, Mode=TwoWay}"/>
         <TextBlock Grid.Row="6" Grid.Column="0" TextWrapping="Wrap" Margin="10">Principal and Interest</TextBlock>
         <TextBox Grid.Row="6"  Grid.Column="1" Margin="0 5" Text="0"/>
     </Grid>

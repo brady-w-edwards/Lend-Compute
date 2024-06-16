@@ -2,50 +2,52 @@
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 using Avalonia.Media;
+using Loan_Calculator;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace Loan_Calculator;
+namespace Loan_Calculator.Models;
 
 public class LoanModel
 {
     //Set Loan Type Property
-    public string? loanType { get; set; }
+    public string? LoanType { get; set; }
 
     // Initial Inputs
-    public decimal cost { get; set; }
-    public decimal intRate { get; set; }
-    public double loanTerm { get; set; }
-    public decimal dwnPayment { get; set; }
+    public decimal Cost { get; set; }
+    public decimal IntRate { get; set; }
+    public double LoanTerm { get; set; }
+    public decimal DwnPayment { get; set; }
 
     // Calculated Values
-    public decimal amount { get; set; }
-    public decimal interestPercent { get; set; }
-    public double monthTerm { get; set; }
-    public decimal intMonthly { get; set; }
-    public decimal monthlyPI { get; set; }
+    public decimal Amount { get; set; }
+    public decimal InterestPercent { get; set; }
+    public double MonthTerm { get; set; }
+    public decimal IntMonthly { get; set; }
+    public decimal MonthlyPI { get; set; }
 
 
     // Calculating Methods
     public void LoanAmount()
     {
-        amount = cost - dwnPayment;
+        Amount = Cost - DwnPayment;
     }
     public void Percent()
     {
-        interestPercent = intRate / 100;
+        InterestPercent = IntRate / 100;
     }
     public void MonthlyTerm()
     {
-        monthTerm = loanTerm * 12;
+        MonthTerm = LoanTerm * 12;
     }
     public void MonthlyInterest()
     {
-        intMonthly = interestPercent / 12;
+        IntMonthly = InterestPercent / 12;
     }
-    public void calcPI()
+    public decimal CalcPI()
     {
-        decimal onePlus = intMonthly + 1;
-        monthlyPI = amount * (intMonthly * DecimalPow(monthTerm, onePlus)) / (DecimalPow(monthTerm, onePlus) - 1);
+        decimal onePlus = IntMonthly + 1;
+        MonthlyPI = Amount * (IntMonthly * DecimalPow(MonthTerm, onePlus)) / (DecimalPow(MonthTerm, onePlus) - 1);
+        return MonthlyPI;
     }
 
     // Declare a method of converting decimal to double and using Math.Pow()
@@ -61,3 +63,19 @@ public class LoanModel
 }
 
 
+public class HomeLoan : LoanModel
+{
+    public decimal MortgageInsuracne { get; set; }
+}
+
+
+public class AutoLoan : LoanModel
+{
+    public decimal AutoInsuracne { get; set; }
+}
+
+
+public class PersonalLoan : LoanModel
+{
+    public decimal LoanInsuracne { get; set; }
+}

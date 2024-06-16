@@ -1,8 +1,25 @@
-﻿namespace Loan_Calculator.ViewModels;
+﻿using Loan_Calculator.Models;
+using ReactiveUI;
+using System.Windows.Input;
+
+namespace Loan_Calculator.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
 {
-#pragma warning disable CA1822 // Mark members as static
-    public string Greeting => "Welcome to Avalonia!";
-#pragma warning restore CA1822 // Mark members as static
+    public ICommand LendCompute { get; }
+
+    public MainWindowViewModel(LoanModel loanModel) : base(loanModel)
+    {
+        LendCompute = ReactiveCommand.Create(() =>
+        {
+            // Code here will be executed when the button is clicked.
+            loanModel.LoanAmount();
+            loanModel.Percent();
+            loanModel.MonthlyTerm();
+            loanModel.MonthlyInterest();
+            loanModel.CalcPI();
+        });
+
+    }
 }
+

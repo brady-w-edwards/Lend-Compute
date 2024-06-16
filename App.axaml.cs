@@ -3,6 +3,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using Loan_Calculator.ViewModels;
 using Loan_Calculator.Views;
+using Loan_Calculator.Models;
 
 namespace Loan_Calculator;
 
@@ -17,9 +18,10 @@ public partial class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
+            var loanModel = new LoanModel();
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainWindowViewModel(),
+                DataContext = new MainWindowViewModel(loanModel)
             };
         }
 
